@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Text-To-Speech by Carlos Miguel Silva</title>
+    <meta name="description" content="Text-To-Speech">
+    <meta name="author" content="Carlos Miguel Silva">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+    <main class="wrapper">
+        <h1>Speak human, not robot!</h1>
+        <p class="lead">Convert text to lifelike speech for more natural interfaces</p>
+
+        <div class="audio-wrapper">
+            <audio id="tts-audio__player" autoplay>not supported</audio>
+
+            <div id="tts-voice" class="section">
+                <h2 class="nomargin-bottom">Standard voices:</h2>
+                <p class="small">More than 75 standard voices are available in over 45 languages. See <a
+                        href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/regions#standard-and-neural-voices"
+                        target="_blank">regions</a>.</p>
+
+                <select id="tts-voice__language" required>
+                    <option value="" disabled>--Select a voice--</option>
+                    <option value="ar-EG-Hoda">ar-EG-Hoda</option>
+                    <option value="ar-SA-Naayf">ar-SA-Naayf</option>
+                    <option value="bg-BG-Ivan">bg-BG-Ivan</option>
+                    <option value="ca-ES-HerenaRUS">ca-ES-HerenaRUS</option>
+                    <option value="cs-CZ-Jakub">cs-CZ-Jakub</option>
+                    <option value="da-DK-HelleRUS">da-DK-HelleRUS</option>
+                    <option value="de-AT-Michael">de-AT-Michael</option>
+                    <option value="de-CH-Karsten">de-CH-Karsten</option>
+                    <option value="de-DE-Hedda">de-DE-Hedda</option>
+                    <option value="de-DE-HeddaRUS">de-DE-HeddaRUS</option>
+                    <option value="de-DE-Stefan-Apollo">de-DE-Stefan-Apollo</option>
+                    <option value="el-GR-Stefanos">el-GR-Stefanos</option>
+                    <option value="en-AU-Catherine">en-AU-Catherine</option>
+                    <option value="en-AU-HayleyRUS">en-AU-HayleyRUS</option>
+                    <option value="en-CA-Linda">en-CA-Linda</option>
+                    <option value="en-CA-HeatherRUS">en-CA-HeatherRUS</option>
+                    <option value="en-GB-Susan-Apollo">en-GB-Susan-Apollo</option>
+                    <option value="en-GB-HazelRUS">en-GB-HazelRUS</option>
+                    <option value="en-GB-George-Apollo">en-GB-George-Apollo</option>
+                    <option value="en-IE-Sean">en-IE-Sean</option>
+                    <option value="en-IN-Heera-Apollo">en-IN-Heera-Apollo</option>
+                    <option value="en-IN-PriyaRUS">en-IN-PriyaRUS</option>
+                    <option value="en-IN-Ravi-Apollo">en-IN-Ravi-Apollo</option>
+                    <option value="en-US-ZiraRUS">en-US-ZiraRUS</option>
+                    <option value="en-US-AriaRUS" selected>en-US-AriaRUS</option>
+                    <option value="en-US-BenjaminRUS">en-US-BenjaminRUS</option>
+                    <option value="en-US-Guy24kRUS">en-US-Guy24kRUS</option>
+                    <option value="es-ES-Laura-Apollo">es-ES-Laura-Apollo</option>
+                    <option value="es-ES-HelenaRUS">es-ES-HelenaRUS</option>
+                    <option value="es-ES-Pablo-Apollo">es-ES-Pablo-Apollo</option>
+                    <option value="es-MX-HildaRUS">es-MX-HildaRUS</option>
+                    <option value="es-MX-Raul-Apollo">es-MX-Raul-Apollo</option>
+                    <option value="fi-FI-HeidiRUS">fi-FI-HeidiRUS</option>
+                    <option value="fr-CA-Caroline">fr-CA-Caroline</option>
+                    <option value="fr-CA-HarmonieRUS">fr-CA-HarmonieRUS</option>
+                    <option value="fr-CH-Guillaume">fr-CH-Guillaume</option>
+                    <option value="fr-FR-Julie-Apollo">fr-FR-Julie-Apollo</option>
+                    <option value="fr-FR-HortenseRUS">fr-FR-HortenseRUS</option>
+                    <option value="fr-FR-Paul-Apollo">fr-FR-Paul-Apollo</option>
+                    <option value="he-IL-Asaf">he-IL-Asaf</option>
+                    <option value="hi-IN-Kalpana-Apollo">hi-IN-Kalpana-Apollo</option>
+                    <option value="hi-IN-Kalpana">hi-IN-Kalpana</option>
+                    <option value="hi-IN-Hemant">hi-IN-Hemant</option>
+                    <option value="hr-HR-Matej">hr-HR-Matej</option>
+                    <option value="hu-HU-Szabolcs">hu-HU-Szabolcs</option>
+                    <option value="id-ID-Andika">id-ID-Andika</option>
+                    <option value="it-IT-Cosimo-Apollo">it-IT-Cosimo-Apollo</option>
+                    <option value="it-IT-LuciaRUS">it-IT-LuciaRUS</option>
+                    <option value="ja-JP-Ayumi-Apollo">ja-JP-Ayumi-Apollo</option>
+                    <option value="ja-JP-Ichiro-Apollo">ja-JP-Ichiro-Apollo</option>
+                    <option value="ja-JP-HarukaRUS">ja-JP-HarukaRUS</option>
+                    <option value="ko-KR-HeamiRUS">ko-KR-HeamiRUS</option>
+                    <option value="ms-MY-Rizwan">ms-MY-Rizwan</option>
+                    <option value="nb-NO-HuldaRUS">nb-NO-HuldaRUS</option>
+                    <option value="nl-NL-HannaRUS">nl-NL-HannaRUS</option>
+                    <option value="pl-PL-PaulinaRUS">pl-PL-PaulinaRUS</option>
+                    <option value="pt-BR-HeloisaRUS">pt-BR-HeloisaRUS</option>
+                    <option value="pt-BR-Daniel-Apollo">pt-BR-Daniel-Apollo</option>
+                    <option value="pt-PT-HeliaRUS">pt-PT-HeliaRUS</option>
+                    <option value="ro-RO-Andrei">ro-RO-Andrei</option>
+                    <option value="ru-RU-Irina-Apollo">ru-RU-Irina-Apollo</option>
+                    <option value="ru-RU-Pavel-Apollo">ru-RU-Pavel-Apollo</option>
+                    <option value="ru-RU-EkaterinaRUS">ru-RU-EkaterinaRUS</option>
+                    <option value="sk-SK-Filip">sk-SK-Filip</option>
+                    <option value="sl-SI-Lado">sl-SI-Lado</option>
+                    <option value="sv-SE-HedvigRUS">sv-SE-HedvigRUS</option>
+                    <option value="ta-IN-Valluvar">ta-IN-Valluvar</option>
+                    <option value="te-IN-Chitra">te-IN-Chitra</option>
+                    <option value="th-TH-Pattara">th-TH-Pattara</option>
+                    <option value="tr-TR-SedaRUS">tr-TR-SedaRUS</option>
+                    <option value="vi-VN-An">vi-VN-An</option>
+                    <option value="zh-CN-HuihuiRUS">zh-CN-HuihuiRUS</option>
+                    <option value="zh-CN-Yaoyao-Apollo">zh-CN-Yaoyao-Apollo</option>
+                    <option value="zh-CN-Kangkang-Apollo">zh-CN-Kangkang-Apollo</option>
+                    <option value="zh-HK-Tracy-Apollo">zh-HK-Tracy-Apollo</option>
+                    <option value="zh-HK-TracyRUS">zh-HK-TracyRUS</option>
+                    <option value="zh-HK-Danny-Apollo">zh-HK-Danny-Apollo</option>
+                    <option value="zh-TW-Yating-Apollo">zh-TW-Yating-Apollo</option>
+                    <option value="zh-TW-HanHanRUS">zh-TW-HanHanRUS</option>
+                    <option value="zh-TW-Zhiwei-Apollo">zh-TW-Zhiwei-Apollo</option>
+                </select>
+            </div>
+
+            <div id="tts-prosody" class="section">
+                <h2>Adjust prosody:</h2>
+                <p class="small">The prosody element is used to specify changes to pitch, rate, duration, volume and more. <br>For the text-to-speech output see the <a
+                    href="https://docs.microsoft.com/bs-latn-ba/azure/cognitive-services/speech-service/speech-synthesis-markup?tabs=csharp#adjust-prosody"
+                    target="_blank">following elements</a>.</p>
+                <select id="tts-prosody__pitch" required>
+                    <option value="" disabled>--Set Pitch--</option>
+                    <option value="x-low">x-low</option>
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                    <option value="x-high">x-high</option>
+                    <option value="default" selected>default</option>
+                </select>
+                <select id="tts-prosody__rate" required>
+                    <option value="" disabled>--Set Rate--</option>
+                    <option value="x-slow">x-slow</option>
+                    <option value="slow">slow</option>
+                    <option value="medium">medium</option>
+                    <option value="fast">fast</option>
+                    <option value="x-fast">x-fast</option>
+                    <option value="default" selected>default</option>
+                </select>
+                <select id="tts-prosody__volume" required>
+                    <option value="" disabled>--Set Volume--</option>
+                    <option value="silent">silent</option>
+                    <option value="x-soft">x-soft</option>
+                    <option value="medium">medium</option>
+                    <option value="loud">loud</option>
+                    <option value="x-loud">x-loud</option>
+                    <option value="default" selected>default</option>
+                </select>
+            </div>
+
+            <div id="tts-content" class="section">
+                <h2>Text to Speech:</h2>
+                <textarea id="tts-content__input" rows="8" cols="50" required>Use Text to Speech —part of the Speech service— to build apps and services that speak naturally. Bring your solutions to life with dozens of voices in a wide range of languages. Create lifelike voices with the Neural Text to Speech capability built on breakthrough research in speech synthesis technology. Customize models to create a unique voice for your solution and brand.</textarea>
+                <br>
+                <button id="tts-content__get">Read text</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="text/javascript" src="/scripts/main.js"></script>
+</body>
+
+</html>

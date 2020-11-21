@@ -1,0 +1,59 @@
+* {
+    font-family: Verdana;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    color: #dc143c;
+}
+
+p {
+    font-size: 1em;
+}
+
+p.lead {
+    font-size: 1.35em;
+}
+
+p.small {
+    font-size: .75em;
+}
+
+button {
+    background-color: #dc143c;
+    border: none; 
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: #a5a5a5;
+    cursor: not-allowed;
+}
+
+.wrapper {
+    position: absolute;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.nomargin-bottom {
+    margin-bottom: 0;
+}
