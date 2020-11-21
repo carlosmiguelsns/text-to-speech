@@ -31,7 +31,7 @@ Next are the steps that you need to perform in order to get the project up and r
 
 
 ```shell
-git clone https://github.com/carlosmiguelsns/text-to-speech
+git clone https://github.com/carlosmiguelsns/text-to-speech.git
 ```
 
 ...navigate to './TTS-Cognitive Serices' folder and run :

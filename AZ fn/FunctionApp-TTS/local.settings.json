@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "COGNITIVE_SERVICE_KEY": "[YOUR-COGNITIVE-SERVICE-KEY]",
+    "COGNITIVE_SERVICE_REGION": "[THE-REGION-OF-YOUR-SERVICE]"
+  },
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "*"
+  }
+}
